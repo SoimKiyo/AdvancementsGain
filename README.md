@@ -74,11 +74,11 @@ This plugin is **open-source**, and contributions are welcome!
 📂 View the **source code** and contribute on **GitHub**
 
 To build the project, clone it and use **Maven**:
-\`\`\`bash
+```
 git clone https://github.com/SoimKiyo/AdvancementsGain.git
 cd AdvancementsGain
 mvn clean package
-\`\`\`
+```
 The compiled plugin will be located in `target/AdvancementsGain.jar`.
 
 ---

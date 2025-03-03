@@ -31,7 +31,7 @@ This plugin is designed to work **with custom achievements** from *AdvancementsC
 3. **(Required)** Install **AdvancementsCore** if not already installed (Buy it on [BuiltByBit](https://builtbybit.com/resources/advancementcore.61398/) or [Polymart](https://polymart.org/resource/advancementscore.7324).  
 4. **(Optional)** Install **Vault** and an economy plugin (like EssentialsX) if you want money rewards.  
 5. Start your server and modify `config.yml` to configure rewards.  
-6. Use `/advancementsgainreload` to reload the configuration.
+6. Use `/advancementsgain reload` to reload the configuration.
 
 ---
 
@@ -39,33 +39,66 @@ This plugin is designed to work **with custom achievements** from *AdvancementsC
 The `config.yml` file lets you define **custom rewards** for each achievement.
 
 ### **Example Configuration**
-\`\`\`yaml
+```
+# ==============================
+#  AdvancementsGain - Config
+# ==============================
+#
+# ➤ Each achievement is defined under `rewards:`, with a unique ID (e.g., "achievement_1").
+# ➤ `mode:` determines who receives the reward:
+#     - "team"   → The entire team gets the reward.
+#     - "player" → Only the player who completed the achievement gets the reward.
+# ➤ Available reward types:
+#     - `xp:` Amount of experience points to grant.
+#     - `money:` Amount of money to grant (requires Vault).
+#     - `items:` List of items in format `ITEM:quantity:meta1:meta2`
+#     - `effects:` List of effects in format `EFFECT:duration:amplifier`
+#     - `commands:` List of commands executed (`{player}` is replaced with the player's name).
+#
+# ➤ General Rewards: These rewards are **always** given regardless of the achievement.
+# ==============================
+
+messages:
+  xp: "§aYou have received {amount} XP!"
+  money: "§aYou have received {amount} coins!"
+  item: "§aYou have received {amount}x {item}!"
+  effect: "§aYou have received the effect: {effect}!"
+  command: "§aCommand executed successfully!"
+  no_permission: "§cYou do not have permission to use this command."
+  reload_success: "§aConfiguration and messages successfully reloaded!"
+  usage: "§cUsage: /advancementsgain reload"
+
+general_rewards:
+  xp: 50
+  money: 20
+  items: ["IRON_INGOT:2", "GOLD_NUGGET:5"]
+  effects: ["LUCK:120:1"]
+  commands: ["say {player} received a general reward!"]
+
 rewards:
-  achievement_craft_diamond_sword:
+  achievement_break_diamond_ore:
+    mode: "player"
+    xp: 200
+    money: 100
+    items: ["DIAMOND:5", "IRON_PICKAXE:1:EFFICIENCY_3:UNBREAKING_2"]
+    effects: ["HASTE:120:2"]
+    commands: ["say {player} has mined their first diamond ore!"]
+
+  achievement_full_netherite_armor:
+    mode: "player"
     xp: 500
-    money: 200
-    items:
-      - "DIAMOND_SWORD:1"
-    effects:
-      - "STRENGTH:60:1"
-    commands:
-      - "say {player} has forged a mighty sword!"
-\`\`\`
+    money: 300
+    items: ["NETHERITE_INGOT:2", "TOTEM_OF_UNDYING:1"]
+    effects: ["RESISTANCE:300:2", "STRENGTH:300:2"]
+    commands: ["say {player} is now a true Netherite warrior!"]
 
-- `id` → The id of one of the achievement in AdvancementsCore (eg. achievement_craft_diamond_sword)
-- `xp` → Amount of experience to give.  
-- `money` → Amount of currency (requires Vault).  
-- `items` → Items to give (`MATERIAL:AMOUNT`).  
-- `effects` → Potion effects (`EFFECT:DURATION:AMPLIFIER`).  
-- `commands` → Console commands executed (`{player}` replaces the player’s name).  
-
----
+```
 
 ## **📌 Commands & Permissions**
 ### **Commands**
 | Command | Description | Permission |
 |---------|-------------|------------|
-| `/advancementsgainreload` | Reloads the plugin configuration | `advancementsgain.admin` |
+| `/advancementsgain reload` | Reloads the plugin configuration | `advancementsgain.admin` |
 
 ---
 

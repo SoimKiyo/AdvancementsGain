@@ -1,0 +1,17 @@
+name: AdvancementsGain
+version: '${project.version}'
+main: com.forgotdot.advancementsgain.AdvancementsGain
+api-version: '1.21'
+softdepend:
+  - Vault
+depend:
+  - AdvancementsCore
+commands:
+  advancementsgain:
+    description: Commande principale d'AdvancementsGain
+    permission: advancementsgain.admin
+    usage: /advancementsgain reload
+permissions:
+  advancementsgain.admin:
+    description: Permet de recharger la configuration
+    default: op

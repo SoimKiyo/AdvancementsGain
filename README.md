@@ -1,8 +1,8 @@
-# **AdvancementsGain**  
-![SpigotMC](https://img.shields.io/badge/SpigotMC-Available-green) ![License](https://img.shields.io/github/license/yourusername/AdvancementsGain) ![Java](https://img.shields.io/badge/Java-17-blue) ![Bukkit](https://img.shields.io/badge/Bukkit-1.21-orange)
+# **AdvancementsGain**
+![SpigotMC](https://img.shields.io/badge/SpigotMC-Available-green) ![Java](https://img.shields.io/badge/Java-17-blue)
 
 **AdvancementsGain** is a **Minecraft Spigot plugin** that allows **custom achievements** to grant configurable **rewards** such as XP, economy money (Vault), items, potion effects, and more.  
-
+  
 This plugin is designed to work **with custom achievements** from *AdvancementsCore* and will be **freely available on SpigotMC**. The **source code and releases** will be hosted on **GitHub**.
 
 ---
@@ -111,7 +111,7 @@ You are free to use, modify, and distribute it with attribution.
 📄 Read the full license **[here](https://github.com/yourusername/AdvancementsGain/blob/main/LICENSE)**.
 
 ---
-
+  
 ## **⭐ Support the Project**
 If you like **AdvancementsGain**, please consider:  
 ✅ **Leaving a ⭐ on GitHub**  

@@ -20,15 +20,15 @@ This plugin is designed to work **with custom achievements** from *AdvancementsC
 
 ## **📜 Installation**
 ### **Requirements**
-- **Minecraft 1.21+** (Supports Paper & Spigot)  
+- **Minecraft 1.17+ to 1.21** (Supports Paper & Spigot)  
 - **Java 17+**  
 - **AdvancementsCore** (Required)  
 - **Vault** (Optional for economy rewards)  
 
 ### **How to Install**
-1. Download **AdvancementsGain.jar** from the [Releases](https://github.com/yourusername/AdvancementsGain/releases) page.  
+1. Download **AdvancementsGain.jar** from the [Releases](https://github.com/SoimKiyo/AdvancementsGain/releases) page.  
 2. Place it in the `plugins/` folder of your Minecraft server.  
-3. **(Required)** Install **AdvancementsCore** if not already installed.  
+3. **(Required)** Install **AdvancementsCore** if not already installed (Buy it on [BuiltByBit](https://builtbybit.com/resources/advancementcore.61398/) or [Polymart](https://polymart.org/resource/advancementscore.7324).  
 4. **(Optional)** Install **Vault** and an economy plugin (like EssentialsX) if you want money rewards.  
 5. Start your server and modify `config.yml` to configure rewards.  
 6. Use `/advancementsgainreload` to reload the configuration.
@@ -52,6 +52,7 @@ rewards:
       - "say {player} has forged a mighty sword!"
 \`\`\`
 
+- `id` → The id of one of the achievement in AdvancementsCore (eg. achievement_craft_diamond_sword)
 - `xp` → Amount of experience to give.  
 - `money` → Amount of currency (requires Vault).  
 - `items` → Items to give (`MATERIAL:AMOUNT`).  
@@ -66,28 +67,15 @@ rewards:
 |---------|-------------|------------|
 | `/advancementsgainreload` | Reloads the plugin configuration | `advancementsgain.admin` |
 
-### **Permissions**
-| Permission | Description |
-|------------|-------------|
-| `advancementsgain.admin` | Allows use of admin commands |
-
----
-
-## **📥 Download**
-You can download the latest version from:  
-🔹 **[SpigotMC Page](https://www.spigotmc.org/resources/your-plugin-link-here/)**  
-🔹 **[GitHub Releases](https://github.com/yourusername/AdvancementsGain/releases)**  
-
 ---
 
 ## **👨‍💻 Developers**
 This plugin is **open-source**, and contributions are welcome!  
-📂 View the **source code** and contribute on **GitHub**:  
-👉 **[GitHub Repository](https://github.com/yourusername/AdvancementsGain)**  
+📂 View the **source code** and contribute on **GitHub**
 
 To build the project, clone it and use **Maven**:
 \`\`\`bash
-git clone https://github.com/yourusername/AdvancementsGain.git
+git clone https://github.com/SoimKiyo/AdvancementsGain.git
 cd AdvancementsGain
 mvn clean package
 \`\`\`
@@ -97,18 +85,10 @@ The compiled plugin will be located in `target/AdvancementsGain.jar`.
 
 ## **📢 Support & Contact**
 If you encounter issues, feel free to:  
-📌 Open an **issue** on **[GitHub Issues](https://github.com/yourusername/AdvancementsGain/issues)**  
+📌 Open an **issue** on **[GitHub Issues](https://github.com/SoimKiyo/AdvancementsGain/issues)**  
 📌 Ask for help on the **SpigotMC Discussion** page  
 
-For direct support, contact me on **Discord**: `YourDiscord#1234`
-
----
-
-## **📜 License**
-This project is licensed under the **MIT License**.  
-You are free to use, modify, and distribute it with attribution.  
-
-📄 Read the full license **[here](https://github.com/yourusername/AdvancementsGain/blob/main/LICENSE)**.
+For direct support, join the discord server : **[Join US](https://discord.gg/Q42XFEyUH5)**.
 
 ---
   
@@ -118,4 +98,4 @@ If you like **AdvancementsGain**, please consider:
 ✅ **Leaving a review on SpigotMC**  
 ✅ **Sharing with other server owners**  
 
-Thank you for using **AdvancementsGain**! 🚀
+Thank !
